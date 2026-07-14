@@ -1,0 +1,15 @@
+{
+  "name": "COM",
+  "satid": "<sat_id>",
+  "mnemonics": [
+    {
+      "name": "COM_XT_12V",
+      "warninglimit": "10.0",
+      "errorlimit": "12.0",
+      "frequency": 25.0,
+      "sml": {
+        "name": "default"
+      }
+    }
+  ]
+}

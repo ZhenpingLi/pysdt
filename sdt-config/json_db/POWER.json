@@ -1,0 +1,41 @@
+{
+    "name": "power",
+    "satid": "<sat_id>",
+    "mnemonics": [
+        {
+            "name": "ATENNA_CURRENT",
+            "frequency": 4.5,
+            "warninglimit": "5.0",
+            "errorlimit": "8.0",
+            "sml": {
+                "name": "fbnn",
+                "dim": [
+                    "5",
+                    "3"
+                ]
+            }
+        },
+        {
+            "name": "BAT1_PRESURE",
+            "frequency": 4.5,
+            "warninglimit": "5.0",
+            "errorlimit": "8.0",
+            "sml": {
+                "name": "ridgefe",
+                "dim": [
+                    "15",
+                    "5"
+                ]
+            }
+        },
+      {
+        "name": "BAT1_P5V",
+        "frequency": 4.5,
+        "warninglimit": "6.0",
+        "errorlimit": "9.0",
+        "sml": {
+          "name": "default"
+        }
+      }
+    ]
+}

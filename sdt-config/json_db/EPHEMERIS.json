@@ -1,0 +1,95 @@
+{
+    "name": "ephemeris",
+    "satid": "<sat_id>",
+    "mnemonics": [
+        {
+            "name": "BODY_MOMENTUM1",
+            "frequency": 4.5,
+            "warninglimit": "5.0",
+            "errorlimit": "8.0",
+            "sml": {
+                "name": "mpoly",
+                "dim": [
+                    "1"
+                ]
+            },
+            "depends": "RW1_MOMENTUM|RW2_MOMENTUM"
+        },
+        {
+            "name": "MOMENTUM1",
+            "frequency": 4.5,
+            "warninglimit": "7.0",
+            "errorlimit": "10.0",
+            "sml": {
+                "name": "default"
+            }
+        },
+        {
+          "name": "QUATERNION1",
+            "frequency": 4.5,
+            "warninglimit": "6",
+            "errorlimit": "10.0",
+            "sml": {
+                "name": "fbnn",
+                "dim": [
+                    "4",
+                    "3"
+                ],
+                "attribute": [
+                    "shifttype|diff",
+                    "modeltime|QUATERNION1"
+                ]                
+            }
+        },
+        {
+            "name": "QUATERNION2",
+            "frequency": 4.5,
+            "warninglimit": "6",
+            "errorlimit": "10.0",
+            "sml": {
+                "name": "fbnn",
+                "dim": [
+                    "4",
+                    "3"
+                ],
+                "attribute": [
+                    "modeltime|QUATERNION1"
+                ]             
+             }
+        },
+        {
+            "name": "QUATERNION3",
+            "frequency": 4.5,
+            "warninglimit": "6",
+            "errorlimit": "10.0",
+            "sml": {
+                "name": "fbnn",
+                "dim": [
+                    "4",
+                    "3"
+                ],
+                "attribute": [
+                    "shifttype|diff",
+                    "modeltime|QUATERNION1"
+                ]             
+             }
+        },
+        {
+            "name": "QUATERNION4",
+            "frequency": 4.5,
+            "warninglimit": "6",
+            "errorlimit": "10.0",
+            "sml": {
+                "name": "fbnn",
+                "dim": [
+                    "4",
+                    "3"
+                ],
+                "attribute": [
+                    "shifttype|diff",
+                    "modeltime|QUATERNION1"
+                ] 
+            }
+        }
+    ]
+}

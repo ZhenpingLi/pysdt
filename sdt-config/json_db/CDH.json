@@ -1,0 +1,15 @@
+{
+  "name": "CDH",
+  "satid": "<sat_id>",
+  "mnemonics": [
+    {
+      "name": "MNEMONIC1",
+      "warninglimit": "6.0",
+      "errorlimit": "9.0",
+      "frequency": 25.0,
+      "sml": {
+        "name": "discrete"
+      }
+    }
+  ]
+}

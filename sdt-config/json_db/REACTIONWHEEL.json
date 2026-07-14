@@ -1,0 +1,29 @@
+{
+    "name": "reactionwheel",
+    "satid": "<SAT_ID>",
+    "mnemonics": [
+        {
+            "name": "RW1_TEMP",
+            "frequency": 4.5,
+            "warninglimit": "8.0",
+            "errorlimit": "10.0",
+            "sml": {
+                "name": "default",
+                "attribute":[
+	                "minstd|0.05"
+	                ]            }
+        },
+        {
+            "name": "RW1_MOMENTUM",
+            "frequency": 4.5,
+            "warninglimit": "6",
+            "errorlimit": "7.0",
+            "sml": {
+                "name": "rmfe",
+                "dim": [
+                    "101"
+                ]
+            }
+        }
+    ]
+}

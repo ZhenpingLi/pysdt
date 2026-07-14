@@ -1,0 +1,34 @@
+{
+  "name": "THERMAL",
+  "satid": "<sat_id>",
+  "mnemonics": [
+    {
+      "name": "THRUSTER_TMP",
+      "warninglimit": "9.0",
+      "errorlimit": "15.0",
+      "frequency": 25.0,
+      "sml": {
+        "name": "hybrid",
+        "option": "monitor",
+        "dim": [
+          29,
+          4,
+          2
+        ],
+        "state": [
+          {
+            "name": "default",
+            "algorithm": "ridgefe"
+          },
+          {
+            "name": "mnvr",
+            "algorithm": "stnet",
+            "flag": "THRUSTER_ENA",
+            "dimpointer": "1",
+            "padfactor": "0|1.0"
+          }
+        ]
+      }
+    }
+  ]
+}
