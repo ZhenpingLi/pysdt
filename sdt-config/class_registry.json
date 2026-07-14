@@ -1,0 +1,23 @@
+{
+  "AlgorithmFactory": {
+    "ridgefe": "algorithm.ridgefe.ridge_fe_algorithm_factory.RidgeFEAlgorithmFactory",
+    "fbnn": "algorithm.fbnn.nn_algorithm_factory.NeuralNetAlgorithmFactory",
+    "refea": "algorithm.xfe.ridge_xfe_algorithm_factory.RidgeXFEAlgorithmFactory",
+    "default": "algorithm.default.default_algorithm_factory.DefaultAlgorithmFactory",
+    "discrete": "algorithm.discrete.discrete_algorithm_factory.DiscreteAlgorithmFactory",
+    "hybrid": "algorithm.hybrid.hybrid_algorithm_factory.HybridAlgorithmFactory",
+    "polytrend": "algorithm.poly.poly_trend_algorithm_factory.PolyTrendAlgorithmFactory",
+    "mpoly": "algorithm.multivariable.multi_variable_algorithm_factory.MultiVariableTrendAlgorithmFactory",
+    "eclcon": "algorithm.eclipse.constant.ECLConstantAlgorithmFactory",
+    "rmfe": "algorithm.rmfe.ridge_mfe_algorithm_factory.RidgeMFEAlgorithmFactory",
+    "lmtrend": "algorithm.lmtrend.lm_trend_algorithm_factory.LMTrendAlgorithmFactory",
+    "stnet": "algorithm.stnet.state_nn_algorithm_factory.StateNNAlgorithmFactory",
+    "timepoly": "algorithm.timepoly.timepoly_algorithm_factory.TimePolyAlgorithmFactory"
+  },
+  "SDTDataInput": {
+    "default": "dataio.sqlite.sqlite_data_input.SQLiteDataInput"
+  },
+  "SDTDataTrainingIO": {
+    "default": "dataio.sqlite.sqlite_data_training_io.SQLiteSDTDataIO"
+  }
+}

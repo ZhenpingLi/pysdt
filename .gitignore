@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# PyCharm / IntelliJ
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# --- AIMS-SDT Specific Ignores ---
+
+# Configuration files (contain sensitive InfluxDB tokens/credentials)
+config.json
+application.json
+
+# Generated database files
+**/json_db/
+**/mnemonic_index.json
+
+# Log and Debug files (Specific names to avoid blocking requirements.txt)
+event_batch_debug.txt
+aims-event-output*.txt
+*.log
+log/
+
+# Local data directories
+data/
+archive/

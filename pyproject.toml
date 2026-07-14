@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pysdt"
+version = "0.1.0"
+authors = [
+  { name="Zhenping Li", email="zpli1@yahoo.com" },
+]
+description = "Model-Based Telemetry Monitoring and Analysis (MTMA) tool for satellite health and safety."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file="LICENSE" }
+keywords = ["telemetry", "satellite", "monitoring", "analysis", "machine-learning", "ai"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Astronomy",
+]
+dependencies = [
+    "numpy",
+    "scipy",
+    "scikit-learn",
+    "matplotlib",
+    "ray[default]",
+    "lttb",
+    "sphinx",
+    "sphinx-rtd-theme",
+    "gnureadline; sys_platform != 'win32'", # gnureadline is Unix-specific
+]
+
+[project.urls]
+"Homepage" = "https://zetaaillc.com/mtma.html"
+"Bug Tracker" = "https://github.com/zhenpingli/pysdt/issues"
+"Documentation" = "https://zetaaillc.com/api/_build/index.html"
+
+[project.scripts]
+sdt = "sdt_main:main" # This will create an executable 'sdt' that runs sdt_main.py's main function
+
+[tool.setuptools.packages.find]
+where = ["."] # Search for packages in the current directory
+include = ["pysdt*"] # Include the top-level package and its subpackages
+
+[tool.setuptools.package-data]
+# Include non-Python files specified in MANIFEST.in
+# setuptools will automatically pick up MANIFEST.in if it exists.
+# This section is often not strictly necessary if MANIFEST.in is comprehensive.
+# However, for explicit clarity or if MANIFEST.in is not used, you can list them here.
+"pysdt" = ["sdt-config/*.json", "sdt-config/json_db/*.json"]

@@ -1,0 +1,27 @@
+# Include all JSON files in the sdt-config directory
+include sdt-config/*.json
+
+# Include all JSON files in the sdt-config/json_db subdirectory
+recursive-include sdt-config/json_db *.json
+
+# Include documentation assets (HTML, CSS, RST, PNG, Python files for autodoc)
+recursive-include tutorial *.html *.css *.png *.rst *.py *.json
+
+# Include any database files or SQL scripts
+recursive-include db *.db *.sql
+
+# Include the LICENSE file
+include LICENSE
+
+# Include the CONTRIBUTING.md file
+include CONTRIBUTING.md
+
+# Include the README.md file
+include README.md
+
+# Exclude build artifacts and temporary files
+exclude *.pyc
+exclude *~
+exclude __pycache__
+recursive-exclude * __pycache__
+recursive-exclude * *.pyc
