@@ -26,7 +26,6 @@ config.json
 application.json
 
 # Generated database files
-**/json_db/
 **/mnemonic_index.json
 
 # Log and Debug files (Specific names to avoid blocking requirements.txt)
