@@ -1,6 +1,6 @@
-# PySDT: A Satellite Digital Twin Project in Python
+# PySDT: An Open Source Satellite Digital Twin (SDT) Project in Python
 
-PySDT is a satellite digital twin project (SDT) to provide model-based data monitoring,
+PySDT is an open source satellite digital twin project (SDT) to provide model-based data monitoring,
 engineering analysis, predictive maintenance, and high fidelity simulations. It is
 integrated into ground systems and leverage the existing infrastructure in the existing
 missions to connect and synchronize with physical satellite to form a feedback loop, which
@@ -63,10 +63,13 @@ The following are the steps for deployment to a new mission; more detailed expla
 provided in the [MTMA tutorial](https://zetaaillc.com/pysdt.html).
 
 1. **Install from GitHub**:
-   ```sh
-   pip install git+https://github.com/ZhenpingLi/pysdt.git
-   cd pysdt
    ```
+   mkdir pysdt
+   git clone https://github.com/ZhenpingLi/pysdt.git pysdt/
+   cd pysdt
+   pip install -r requirements.txt
+   ```
+   This requires the user to have a python environment with the required packages installed. The installation from GitHub can involves the creation of pysdt directory in a user's home directory, or a directory in the current working directory, clone the repository in the Github, and the installation the required packages from the requirements.txt file.
 
 2. **Initial Configuration Setup**:
    ```sh
